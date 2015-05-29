@@ -3,14 +3,14 @@ var gulp = require('gulp')
 var plumber = require('gulp-plumber')
 
 var paths = {
-  js: 'lib/**/*.js'
+  js: 'src/**/*.js'
 }
 
 gulp.task('js', function () {
   return gulp.src(paths.js)
     .pipe(plumber())
     .pipe(babel({stage: 1}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('build'))
 })
 
 gulp.task('watch', function() {
