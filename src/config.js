@@ -2,6 +2,10 @@ import yargs from 'yargs'
 
 let argv = yargs.argv
 
+/**
+ * config can be entered via arguments on the command line
+ * (e.g. --username=bot-username) or by replacing the null values below 
+ */
 export const botUsername = argv.username || null
 export const botPassword = argv.password || null
 export const port = argv.port || null
