@@ -9,7 +9,7 @@ let server = express()
 
 server.use(bodyParser.json())
 
-server.all('/', (req, res) => {
+server.all('/postreceive', (req, res) => {
   res.end()
   bot.onEvent(req.body)
 })
