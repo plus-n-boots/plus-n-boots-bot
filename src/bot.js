@@ -1,6 +1,6 @@
 import request from 'request'
 import {initialTemplate, updateTemplate} from './templates'
-import {setData, getData} from './store'
+import {set, get} from './store'
 
 export default class {
   constructor (username, password) {
@@ -13,11 +13,19 @@ export default class {
    */
   async onEvent (event) {
     if (event.issue && event.action === 'opened') {
-      await this.commentIssue(event)
+      try {
+        await this.commentIssue(event)
+      } catch (err) {
+        console.log(err)
+      }
     }
 
     if (event.comment && this.isPlusOne(event.comment.body)) {
-      await this.amendComment(event)
+      try {
+        await this.amendComment(event)
+      } catch (err) {
+        console.log(err)
+      }
     }
   }
 
@@ -75,7 +83,7 @@ export default class {
       users: []
     }
 
-    setData(event.repository.full_name, event.issue.number, issue, 'save')
+    set(event.repository.full_name, event.issue.number, issue, 'save')
   }
 
   /**
@@ -90,7 +98,7 @@ export default class {
    */
   async amendComment (event) {
     await this.deleteComment(event)
-    let issue = await getData(event.repository.full_name, event.issue.number)
+    let issue = await get(event.repository.full_name, event.issue.number)
 
     if (issue.users.indexOf(event.comment.user.login) === -1) {
       issue.users.push(event.comment.user.login)
@@ -100,7 +108,7 @@ export default class {
       await this.request('PATCH', `repos/${event.repository.full_name}/issues/comments/${issue.initialComment}`, {
         body: updateTemplate(issue.count, usersStr)
       })
-      updateData(event.repository.full_name, event.issue.number, issue, 'merge')
+      set(event.repository.full_name, event.issue.number, issue, 'merge')
     }
   }
 
