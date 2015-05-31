@@ -1,1 +1,1 @@
-// import server from '../src/index'
+import server from '../src/index'

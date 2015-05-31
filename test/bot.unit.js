@@ -1,1 +1,1 @@
-// import Bot from '../src/bot'
+import Bot from '../src/bot'

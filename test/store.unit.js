@@ -1,1 +1,1 @@
-// import {get, set} from '../src/store'
+import {get, set} from '../src/store'
