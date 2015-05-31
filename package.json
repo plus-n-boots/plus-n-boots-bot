@@ -4,9 +4,8 @@
   "description": "Your friendly +1 management bot.",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp js",
-    "test": "mocha --compilers js:babel/register"
+    "test": "mocha --require should --compilers js:babel/register",
+    "build": "gulp js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
     "gulp-plumber": "^1.0.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "should": "^6.0.3"
   }
 }
