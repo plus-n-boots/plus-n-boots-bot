@@ -26,12 +26,6 @@
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
     "gulp-plumber": "^1.0.0",
-    "jasmine-core": "^2.3.4",
-    "karma": "^0.12.35",
-    "karma-babel-preprocessor": "^5.2.1",
-    "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.2.0",
-    "mocha": "^2.2.5",
-    "phantomjs": "^1.9.17"
+    "mocha": "^2.2.5"
   }
 }
