@@ -4,7 +4,7 @@
   "description": "Your friendly +1 management bot.",
   "main": "build/index.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- --require should --compilers js:babel/register",
+    "test": "istanbul cover _mocha -- --require should --compilers js:babel-core/register",
     "build": "gulp js"
   },
   "repository": {

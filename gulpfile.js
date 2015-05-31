@@ -12,7 +12,7 @@ var paths = {
 gulp.task('js', function () {
   return gulp.src(paths.js)
     .pipe(plumber())
-    .pipe(babel({stage: 1}))
+    .pipe(babel())
     .pipe(gulp.dest('build'))
 })
 
