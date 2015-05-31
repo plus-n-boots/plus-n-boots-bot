@@ -1,4 +1,4 @@
-import {initialTemplate, updateTemplate} from '../src/templates.js'
+import {initialTemplate, updateTemplate} from '../src/templates'
 
 describe('initialTemplate', () => {
   it('should return a static markdown template', () => {
