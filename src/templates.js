@@ -9,9 +9,9 @@ let intro = `###### plus-n-boots here, I'll be helping keep track of +1's for th
 let outro = `
 ----------
 
-###### Want my help in your organisation or repository? Check out my [getting started guide]() for details.
+###### Want my help in your organisation or repository? Check out my [getting started guide](https://github.com/plus-n-boots/plus-n-boots-bot#background) for details.
 
-###### Did I do something wrong? Something I could do better? Head over to my [repository]() to tell me about it.
+###### Did I do something wrong? Something I could do better? Head over to my [repository](https://github.com/plus-n-boots/plus-n-boots-bot/issues) to tell me about it.
 
 `
 /**
@@ -31,7 +31,7 @@ export function updateTemplate (count, users) {
   let listPlural = count === 1 ? 'That\'s you' : 'They are'
   let body = `### ${count} ${peoplePlural} +1'd this issue.
 
-###### ${listPlural} ${users}`
+###### ${listPlural} ${users}.`
   let comment = intro + body + outro
   return comment
 }
