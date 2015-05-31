@@ -103,10 +103,8 @@ export default class {
     if (issue.users.indexOf(event.comment.user.login) === -1) {
       issue.users.push(event.comment.user.login)
       issue.count++
-      let linkedUsers = issue.users.map(user => `@${user}`)
-      let usersStr = linkedUsers.join(', ')
       await this.request('PATCH', `repos/${event.repository.full_name}/issues/comments/${issue.initialComment}`, {
-        body: updateTemplate(issue.count, usersStr)
+        body: updateTemplate(issue.count, issue.users)
       })
       set(event.repository.full_name, event.issue.number, issue, 'merge')
     }
