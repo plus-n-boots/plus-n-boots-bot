@@ -1,21 +1,68 @@
 import 'babel-core/polyfill'
 import bodyParser from 'body-parser'
+import cradle from 'cradle'
+import dedent from 'dedent'
 import express from 'express'
 import Bot from './bot'
-import {botUsername, botPassword, port} from './config'
+import {
+  botUsername,
+  botPassword,
+  couchInstance,
+  couchPort,
+  port} from './config'
 
-let bot = new Bot(botUsername, botPassword)
-let server = express()
+export default initDb()
 
-server.use(bodyParser.json())
+/**
+ * initialise database
+ */
+function initDb() {
+  let couch = new (cradle.Connection)(couchInstance, couchPort)
+  let db = couch.database('issues')
 
-server.all('/postreceive', (req, res) => {
-  res.end()
-  bot.onEvent(req.body)
-})
+  db.exists(function (err, exists) {
+    if (err) {
+      console.log(err)
+    } else {
+      if (exists) {
+        initServer()
+        console.log(dedent`Connected to database
+                           Host:      ${db.connection.host}:${db.connection.port}
+                           Database:  ${db.name}` + '\n')
+      } else {
+        db.create((err) => {
+          if (err) {
+            console.log(err)
+          } else {
+            initServer()
+            console.log(dedent`Connected to database
+                               Host:      ${db.connection.host}:${db.connection.port}
+                               Database:  ${db.name}`+ '\n')
+          }
+        })
+      }
+    }
+  })
 
-server.listen(port, () => {
-  console.log(`listening on port ${port}`)
-})
+  return db
+}
 
-export default server
+/**
+ * initialise server
+ */
+function initServer() {
+  let bot = new Bot(botUsername, botPassword)
+  let server = express()
+
+  server.use(bodyParser.json())
+
+  server.all('/postreceive', (req, res) => {
+    res.end()
+    bot.onEvent(req.body)
+  })
+
+  server.listen(port, () => {
+    console.log(dedent`Connected to server
+                       Port:      ${port}`)
+  })
+}

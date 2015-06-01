@@ -1,19 +1,10 @@
 import cradle from 'cradle'
-import {couchInstance, couchPort} from './config'
-
-/**
- * initial database setup
- */
-let setup = function setupFn () {
-  let couch = new (cradle.Connection)(couchInstance, couchPort)
-  let db = couch.database('issues')
-}
+import db from './index'
 
 /**
  * add intial data when issue is opened
  */
 export function set (repoName, issueId, issueData, action) {
-  setup()
   db[action](`issue:${repoName}_${issueId}`, issueData, (err, res) => {
     if (err) {
       console.log(err)

@@ -1,6 +1,10 @@
 import request from 'request'
-import {initialTemplate, updateTemplate} from './templates'
-import {set, get} from './store'
+import {
+  initialTemplate,
+  updateTemplate} from './templates'
+import {
+  set,
+  get} from './store'
 
 export default class {
   constructor (username, password) {
