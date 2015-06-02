@@ -5,11 +5,15 @@ import db from './index'
  * add intial data when issue is opened
  */
 export function set (repoName, issueId, issueData, action) {
+  let response
   db[action](`issue:${repoName}_${issueId}`, issueData, (err, res) => {
     if (err) {
       console.log(err)
+    } else {
+      response = res
     }
   })
+  return response
 }
 
 /**
