@@ -9,9 +9,16 @@ import {
   botPassword,
   couchInstance,
   couchPort,
-  port} from './config'
+  port,
+  test} from './config'
 
-export default initDb()
+let db
+
+if (!test) {
+  db = initDb()
+}
+
+export default db
 
 /**
  * initialise database

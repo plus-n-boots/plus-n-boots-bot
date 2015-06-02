@@ -11,3 +11,4 @@ export const botPassword = argv.password || null
 export const port = argv.port || null
 export const couchInstance = argv.couch || null
 export const couchPort = argv['couch-port'] || null
+export const test = process.env.TEST || false
