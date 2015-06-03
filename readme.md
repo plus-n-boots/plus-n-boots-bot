@@ -65,7 +65,7 @@ node build/index.js --username=<GitHub username> --password=<GitHub password> --
 For example.
 
 ```
-node build/index.js --username=plus-n-boots-official --password=****** --port=8888 --couch=https://plusnboots.iriscouch.com --couch-port=443
+node build/index.js --username=plus-n-boots-official --password=****** --port=8888 --couch=plusnboots.iriscouch.com --couch-port=443
 ```
 
 If you'd prefer the config setup to be handled within the source code you can add the same values into the config module (`src/config.js`) then run the above command with no arguments. Be sure to re-build the code (`npm run build`) after making any changes.
