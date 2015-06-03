@@ -1,7 +1,8 @@
 import dedent from 'dedent'
+import {botUsername} from './config'
 
 let intro = dedent`
-  ###### plus-n-boots here, I'll be helping keep track of +1's for this issue.
+  ###### ${botUsername} here, I'll be helping keep track of +1's for this issue.
 
   ###### To add your support just leave a comment saying +1 or :+1: and I'll handle the rest.
 
