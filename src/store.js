@@ -1,4 +1,3 @@
-import cradle from 'cradle'
 import db from './index'
 
 /**
