@@ -14,6 +14,14 @@ The bot currently doesn't get around the issue of emails being sent on each new 
 
 You can try plus-n-boots out by raising an issue on the [try-me-out repository](https://github.com/plus-n-boots/try-me-out). The bot considers +1, `:+1:` and `:thumbsup:` as a +1.
 
+### Hosted Instance
+
+If you'd prefer not to have to set up your own instance of plus-n-boots then stay tuned for a hosted instance which will only require you to add the bot as collaborator on your organisation/repository.
+
+### Dedicated Instance
+
+If you'd prefer to handle things yourself then follow the instructions below.
+
 ### Dependencies
 
 * [CouchDB](https://couchdb.apache.org/)
