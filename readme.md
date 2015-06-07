@@ -16,7 +16,7 @@ You can try plus-n-boots out by raising an issue on the [try-me-out repository](
 
 ### Hosted Instance
 
-If you'd prefer not to have to set up your own instance of plus-n-boots then stay tuned for a hosted instance which will only require you to add the bot as collaborator on your organisation/repository.
+If you'd prefer not to have to set up your own instance of plus-n-boots then stay keep an eye out for a hosted instance  coming soon which will only require you to add the bot as collaborator on your organisation/repository.
 
 ### Dedicated Instance
 
