@@ -106,6 +106,7 @@ Any feedback/improvements for the code, process and setup guide would be greatly
 
 Things are still in very early stages right now. Here's a general list of things I'll be looking to implement/fix in the near future:
 
+* Hosted instance
 * Unit & integration tests
 * 2FA support
 * CLI argument validation/help
