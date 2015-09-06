@@ -1,5 +1,5 @@
 {
-  "name": "plus-n-boots",
+  "name": "tigris-bot",
   "version": "0.1.0",
   "description": "Your friendly +1 management bot.",
   "main": "build/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:plus-n-boots/plus-n-boots-bot.git"
+    "url": "git@github.com:tigris-bot/tigris-bot.git"
   },
   "author": "Chris Wheatley <chriswheatley87@gmail.com>",
   "license": "MIT",

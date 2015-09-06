@@ -12,9 +12,9 @@ let intro = dedent`
 let outro = dedent`
   ----------
 
-  ###### Want my help in your organisation or repository? Check out my [getting started guide](https://github.com/plus-n-boots/plus-n-boots-bot#background) for details.
+  ###### Want my help in your organisation or repository? Check out my [getting started guide](https://github.com/tigris-bot/tigris-bot#background) for details.
 
-  ###### Did I do something wrong? Something I could do better? Head over to my [repository](https://github.com/plus-n-boots/plus-n-boots-bot/issues) to tell me about it.
+  ###### Did I do something wrong? Something I could do better? Head over to my [repository](https://github.com/tigris-bot/tigris-bot/issues) to tell me about it.
 `
 
 /**
