@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/tigris-bot/tigris-bot](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tigris-bot/tigris-bot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Your friendly +1 management bot.
+Your friendly +1 management bot. [Try it out](https://github.com/plus-n-boots/try-me-out/issues/1).
 
 ### Background
 
@@ -106,6 +106,7 @@ Any feedback/improvements for the code, process and setup guide would be greatly
 
 Things are still in very early stages right now. Here's a general list of things I'll be looking to implement/fix in the near future:
 
+* Hosted instance
 * Unit & integration tests
 * 2FA support
 * CLI argument validation/help
