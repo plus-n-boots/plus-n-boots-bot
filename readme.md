@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/tigris-bot/tigris-bot](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tigris-bot/tigris-bot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Your friendly +1 management bot. [Try it out](https://github.com/plus-n-boots/try-me-out/issues/1).
+Your friendly +1 management bot.
 
 ### Background
 
