@@ -12,7 +12,7 @@ Inspired by [this issue](https://github.com/isaacs/github/issues/9) the bot crea
 
 The bot currently doesn't get around the issue of emails being sent on each new +1.
 
-You can try tigris-bot out by raising an issue on the [try-me-out repository](https://github.com/tigris-bot/try-me-out). The bot considers +1, `:+1:` and `:thumbsup:` as a +1.
+The bot considers +1, `:+1:` and `:thumbsup:` as a +1.
 
 ### Hosted Instance
 
